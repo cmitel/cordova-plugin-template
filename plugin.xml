@@ -28,7 +28,7 @@
         </js-module>
 		
 	    <js-module src="www/windows/constants.js" name="...">
-	        <merges target="" />
+	        <merges target="..." />
 	    </js-module>
 		
     </platform>
@@ -37,7 +37,7 @@
 	<platform name="android">
 		
 	    <js-module src="www/android/constants.js" name="...">
-	        <merges target="" />
+	        <merges target="..." />
 	    </js-module>
 		
 	</platform>
@@ -46,7 +46,7 @@
 	<platform name="ios">
 		
 	    <js-module src="www/ios/constants.js" name="...">
-	        <merges target="" />
+	        <merges target="..." />
 	    </js-module>
 		
 	</platform>
