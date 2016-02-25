@@ -1,3 +1,3 @@
 module.exports = {
-    API_NAME: "SvnComponent"
+    API_NAME: "YourNamespaceComponent"
 };
