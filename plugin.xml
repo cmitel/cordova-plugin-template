@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	id="your.unique.reverse.plugin.identifier"
+    version="0.0.0">
+    
+    <name>###</name>
+    <description>###</description>
+    <author>###</author>
+    <keywords>###</keywords>
+    <license>###</license>
+    
+    <js-module src="www/api.js" name="...">
+        <clobbers target="..." />
+    </js-module>
+
+    <js-module src="www/constants.js" name="...">
+        <merges target="..." />
+    </js-module>   
+
+    <!-- windows -->
+    <platform name="windows">
+
+        <!-- Windows Plugin JS Proxy because RunTimeComponent is injected within Window DOM Object -->
+        <js-module src="src/windows/ApiProxy.js" name="...">
+            <merges target="..." />
+        </js-module>
+		
+	    <js-module src="www/windows/constants.js" name="...">
+	        <merges target="" />
+	    </js-module>
+		
+    </platform>
+	
+	<!-- android -->
+	<platform name="android">
+		
+	    <js-module src="www/android/constants.js" name="...">
+	        <merges target="" />
+	    </js-module>
+		
+	</platform>
+	
+	<!-- ios -->
+	<platform name="ios">
+		
+	    <js-module src="www/ios/constants.js" name="...">
+	        <merges target="" />
+	    </js-module>
+		
+	</platform>
+	
+</plugin>
