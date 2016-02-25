@@ -1,9 +1,9 @@
 var proxy = require("cordova/exec/proxy"),
-    constants = require("./SvnConstants"),
+	// @todo require constant module
+    constants = require("./[CONSTANT_MODULE_NAME_IN_PLUGIN.XML]"),
     debug = true;
 
 // Create instance of Windows Runtime Component
-// var component = new Component.Namespace();
 var WinRT_component = null;
 
 module.exports = {
@@ -13,13 +13,16 @@ module.exports = {
 
 proxy.add(constants.API_NAME, module.exports);
 
+// ------------- private functions ------------- //
+
 /***
  * Gets/Creates the WinRT component singleton instance
+ * @params {mixed} params
  * @returns {*}
  */
-function getWinRTComponentInstance() {
+function getWinRTComponentInstance(params) {
     if (WinRT_component === null) {
-        WinRT_component = new InnerBarcodeComponent.Barcode();
+        WinRT_component = new YourNamespaceComponent.NativeFeatureClass(...params...);
     }
     return WinRT_component;
 }
@@ -48,7 +51,7 @@ function resultLogger(mode, fnName, result) {
     }
 }
 
-// API functions
+// ------------- API functions ------------- //
 
 // Example
 /* function hello(success, error, args) {
